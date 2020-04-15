@@ -42,3 +42,12 @@ RUN make && make install && make samples && make config && ldconfig
 # Install RU-WAV
 WORKDIR /var/lib/asterisk/sounds
 RUN wget http://downloads.asterisk.org/pub/telephony/sounds/asterisk-core-sounds-ru-wav-current.tar.gz && wget http://downloads.asterisk.org/pub/telephony/sounds/asterisk-extra-sounds-en-wav-current.tar.gz && tar xvf asterisk-core-sounds-ru-wav-current.tar.gz && tar xvf asterisk-extra-sounds-en-wav-current.tar.gz
+
+# asterisk user
+RUN useradd -m asterisk -s /sbin/nologin
+RUN chown asterisk:asterisk /var/run/asterisk
+RUN chown -R asterisk:asterisk /etc/asterisk/
+RUN chown -R asterisk:asterisk /var/{lib,log,spool}/asterisk
+RUN chown -R asterisk:asterisk /usr/lib64/asterisk/
+
+CMD /usr/sbin/asterisk -f -U asterisk -G asterisk -vvvg -c
