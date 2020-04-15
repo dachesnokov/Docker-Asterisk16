@@ -30,14 +30,16 @@ WORKDIR /usr/src/asterisk-16.9.0
 RUN contrib/scripts/install_prereq install
 RUN contrib/scripts/get_mp3_source.sh
 RUN ./configure --libdir=/usr/lib64 --with-pjproject-bundled --with-jansson-bundled --with-crypto --with-ssl=ssl --with-srtp
-# RUN make menuselect.makeopts
-# RUN menuselect/menuselect \
-#  --disable BUILD_NATIVE \
-#  --enable cdr_csv \
-#  --enable chan_sip \
-#  --enable res_snmp \
-#  --enable res_http_websocket \
-#  menuselect.makeopts
+RUN make menuselect.makeopts
+RUN menuselect/menuselect \
+  --enable format_mp3 \
+  --enable res_config_mysql \
+  --enable app_mysql \
+  --enable cdr_mysql \
+  --enable CORE-SOUNDS-RU-WAV \
+  --enable MOH-OPSOUND-WAV \
+  --enable EXTRA-SOUNDS-EN-WAV \
+  menuselect.makeopts
 RUN make && make install && make samples && make config && ldconfig
 
 # Install RU-WAV
