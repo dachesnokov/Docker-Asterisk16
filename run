@@ -1,0 +1,10 @@
+#!/bin/bash
+
+docker run \
+ -v /var/docker/centos7-asterisk16lts/data/etc/asterisk:/etc/asterisk \
+ -v /var/docker/centos7-asterisk16lts/data/var/log/asterisk:/var/log/asterisk \
+ -p 5060:5060 \
+ --name pbx \
+ -h pbx \
+ --restart=always \
+ -i -t "pbx"
