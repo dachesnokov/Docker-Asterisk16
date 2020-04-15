@@ -1,0 +1,4 @@
+configure: *** Asterisk requires libjansson >= 2.11 and no system copy was found.
+configure: *** Please install the 'libjansson' development package or
+configure: *** use './configure --with-jansson-bundled'
+The command '/bin/sh -c ./configure --libdir=/usr/lib64 --with-crypto --with-ssl=ssl --with-srtp #--with-pjproject-bundled --with-jansson-bundled' returned a non-zero code: 1
