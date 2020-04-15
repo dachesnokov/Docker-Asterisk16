@@ -5,6 +5,8 @@ The command '/bin/sh -c ./configure --libdir=/usr/lib64 --with-crypto --with-ssl
 
 
 Delta RPMs disabled because /usr/bin/applydeltarpm not installed.
+Решение - yum -y install deltarpm
+
 warning: /var/cache/yum/x86_64/7/epel/packages/gmime-2.6.23-1.el7.x86_64.rpm: Header V3 RSA/SHA256 Signature, key ID 352c64e5: NOKEY
 Public key for gmime-2.6.23-1.el7.x86_64.rpm is not installed
 --------------------------------------------------------------------------------
