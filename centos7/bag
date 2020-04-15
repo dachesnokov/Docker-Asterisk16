@@ -2,3 +2,16 @@ configure: *** Asterisk requires libjansson >= 2.11 and no system copy was found
 configure: *** Please install the 'libjansson' development package or
 configure: *** use './configure --with-jansson-bundled'
 The command '/bin/sh -c ./configure --libdir=/usr/lib64 --with-crypto --with-ssl=ssl --with-srtp #--with-pjproject-bundled --with-jansson-bundled' returned a non-zero code: 1
+
+
+Delta RPMs disabled because /usr/bin/applydeltarpm not installed.
+warning: /var/cache/yum/x86_64/7/epel/packages/gmime-2.6.23-1.el7.x86_64.rpm: Header V3 RSA/SHA256 Signature, key ID 352c64e5: NOKEY
+Public key for gmime-2.6.23-1.el7.x86_64.rpm is not installed
+--------------------------------------------------------------------------------
+Total                                              6.7 MB/s |  56 MB  00:08
+Retrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7
+Importing GPG key 0x352C64E5:
+ Userid     : "Fedora EPEL (7) <epel@fedoraproject.org>"
+ Fingerprint: 91e9 7d7c 4a5e 96f1 7f3e 888f 6a2f aea2 352c 64e5
+ Package    : epel-release-7-11.noarch (@extras)
+ From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7
