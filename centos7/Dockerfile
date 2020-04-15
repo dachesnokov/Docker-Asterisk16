@@ -3,8 +3,7 @@ MAINTAINER Chesnokov Dmitriy <dachesnokov@outlook.com>
 RUN yum -y update
 RUN yum -y install epel-release
 RUN yum -y groupinstall "Development Tools"
-RUN yum -y install libedit-devel sqlite-devel psmisc gmime-devel ncurses-devel libtermcap-devel sox newt-devel libxml2-devel libtiff-devel audiofile-devel gtk2-devel uuid-devel libuuid-devel kernel-devel kernel-devel-$(uname -r) crontabs cronie cronie-anacron wget
-# убрано libtool subversion git - есть в "Development Tools"
+RUN yum -y install libedit-devel sqlite-devel psmisc gmime-devel ncurses-devel libtermcap-devel sox newt-devel libxml2-devel libtiff-devel audiofile-devel gtk2-devel uuid-devel libuuid-devel kernel-devel kernel-devel-$(uname -r) libtool subversion git crontabs cronie cronie-anacron wget
 
 # Install jansson
 WORKDIR /usr/src
