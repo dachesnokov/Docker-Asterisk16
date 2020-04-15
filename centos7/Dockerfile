@@ -26,7 +26,7 @@ RUN ldconfig
 WORKDIR /usr/src
 RUN wget http://downloads.asterisk.org/pub/telephony/asterisk/asterisk-16-current.tar.gz
 RUN tar xvfz asterisk-16-current.tar.gz
-WORKDIR /usr/src/asterisk-16.*
+WORKDIR /usr/src/asterisk-16.9.0
 RUN contrib/scripts/install_prereq install
 RUN contrib/scripts/get_mp3_source.sh
 RUN ./configure --libdir=/usr/lib64 --with-pjproject-bundled --with-jansson-bundled --with-crypto --with-ssl=ssl --with-srtp
