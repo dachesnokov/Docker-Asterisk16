@@ -1,5 +1,6 @@
 FROM centos:centos7
 MAINTAINER Chesnokov Dmitriy <dachesnokov@outlook.com>
+RUN yum -y install deltarpm
 RUN yum -y update
 RUN yum -y install epel-release
 RUN yum -y groupinstall "Development Tools"
@@ -10,9 +11,11 @@ WORKDIR /usr/src
 RUN wget http://www.digip.org/jansson/releases/jansson-2.11.tar.gz
 RUN tar xvfz jansson-2.11.tar.gz
 WORKDIR /usr/src/jansson-2.11
-RUN autoreconf -i
-RUN ./configure --prefix=/usr/
-RUN make && make install
+RUN autoreconf -fi
+RUN ./configure
+RUN make
+RUN make check
+RUN make install
 
 # Install pjproject
 #WORKDIR /usr/src
