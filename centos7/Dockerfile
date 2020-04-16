@@ -30,9 +30,7 @@ WORKDIR /usr/src
 RUN wget http://www.pjsip.org/release/2.9/pjproject-2.9.tar.bz2 \
   && tar -xjvf pjproject-2.9.tar.bz2 \
   && cd /usr/src/pjproject-2.9 \
-  && ./configure CFLAGS="-DNDEBUG -DPJ_HAS_IPV6=1" --prefix=/usr \
-  --libdir=/usr/lib64 --enable-shared --disable-video \
-  --disable-sound --disable-opencore-amr \
+  && ./configure CFLAGS="-DNDEBUG -DPJ_HAS_IPV6=1" --prefix=/usr --libdir=/usr/lib64 --enable-shared --disable-video --disable-sound --disable-opencore-amr \
   && make dep \
   && make \
   && make install \
@@ -48,8 +46,7 @@ RUN wget http://downloads.asterisk.org/pub/telephony/asterisk/asterisk-16-curren
   && cd /usr/src/asterisk-16.9.0 \
   && contrib/scripts/install_prereq install \
   && contrib/scripts/get_mp3_source.sh \
-  && ./configure --libdir=/usr/lib64 --with-jansson-bundled --with-pjproject-bundled \
-  --with-crypto --with-ssl=ssl --with-srtp \
+  && ./configure --libdir=/usr/lib64 --with-jansson-bundled --with-pjproject-bundled --with-crypto --with-ssl=ssl --with-srtp \
   && make menuselect.makeopts \
   && menuselect/menuselect \
   --enable format_mp3 \
