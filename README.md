@@ -6,6 +6,7 @@ Docker-Asterisk16
 > Репозиторий на [dockerhub](https://hub.docker.com/u/dachesnokov)
 
 GET START CentOS
+----------------
 
       # mkdir /var/docker
       # cd /var/docker
