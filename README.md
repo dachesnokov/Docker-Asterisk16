@@ -15,9 +15,10 @@ BUILD
 HELP
 ----
 
-Войти в bash
+Войти в bash / asterisk cli
 
       # docker exec -it "conteiner id" /bin/bash
+      # docker exec -it "conteiner id" asterisk -rvvv
 
 Создать volume на host-docker
 
