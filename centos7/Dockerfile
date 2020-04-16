@@ -81,6 +81,6 @@ RUN wget http://downloads.asterisk.org/pub/telephony/sounds/asterisk-core-sounds
   rm -rf /tmp/*
 
 WORKDIR /
-ADD start_aster.sh /start_aster.sh \
-  && chmod +x /start_aster.sh
+ADD start_aster.sh /start_aster.sh
+RUN chmod +x /start_aster.sh
 CMD ["/start_aster.sh"]
