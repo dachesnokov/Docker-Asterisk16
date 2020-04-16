@@ -22,8 +22,7 @@ RUN wget http://www.digip.org/jansson/releases/jansson-2.12.tar.gz \
   && make install \
   && cd / \
   && rm -f /usr/src/jansson-2.12.tar.gz \
-  && rm -rf /usr/src/jansson-2.12 \
-  && rm -rf /tmp/*
+  && rm -rf /usr/src/jansson-2.12
 
 
 # Install pjproject
@@ -40,8 +39,7 @@ RUN wget http://www.pjsip.org/release/2.9/pjproject-2.9.tar.bz2 \
   && ldconfig \
   && cd / \
   && rm -f /usr/src/pjproject-2.9.tar.bz2 \
-  && rm -rf /usr/src/pjproject-2.9 \
-  && rm -rf /tmp/*
+  && rm -rf /usr/src/pjproject-2.9
 
 # Install Asterisk 16:
 WORKDIR /usr/src
