@@ -1,4 +1,4 @@
 #!/bin/bash
-asterisk -U asterisk
+asterisk
 sleep 5
 asterisk -r
