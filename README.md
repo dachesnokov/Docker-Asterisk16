@@ -3,8 +3,6 @@ Docker-Asterisk16
 
 Построение контейнера "Asterisk 16 LTS" для Docker
 
-[![Build Status]()]()
-
 > Репозиторий на [dockerhub](https://hub.docker.com/u/dachesnokov)
 
 GET START CentOS
