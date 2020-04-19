@@ -19,11 +19,6 @@ GET START CentOS
       # /var/docker/Docker-Asterisk16/centos7/run.sh
 
 
-BUILD
-----
-
-      # docker build -t "image id" .
-
 HELP
 ----
 
