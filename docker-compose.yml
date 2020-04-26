@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+
+  pbx:
+    image: dachesnokov/asterisk16:centos7
+    container_name: cda24_pbx
+    volumes:
+      - ./centos7/etc/asterisk:/etc/asterisk
+      - ./centos7/var/log/asterisk:/var/log/asterisk
+    restart: always
+    network_mode: "host"
