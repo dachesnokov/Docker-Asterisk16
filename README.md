@@ -10,7 +10,6 @@ GET START CentOS
 
       # mkdir /var/docker
       # cd /var/docker
-      # yum -y install git
       # git clone https://github.com/dachesnokov/Docker-Asterisk16.git
       # cd /var/docker/Docker-Asterisk16/centos7
       # chmod +x /var/docker/Docker-Asterisk16/centos7/build.sh
