@@ -5,8 +5,8 @@ Docker-Asterisk16
 
 > Готовый images на [dockerhub](https://hub.docker.com/r/dachesnokov/asterisk16)
 
-GET START CentOS
-----------------
+GET START
+---------
 
       # mkdir /var/docker
       # cd /var/docker
@@ -16,7 +16,6 @@ GET START CentOS
       # /var/docker/Docker-Asterisk16/centos7/build.sh
       # chmod +x /var/docker/Docker-Asterisk16/centos7/run.sh
       # /var/docker/Docker-Asterisk16/centos7/run.sh
-
 
 HELP
 ----
