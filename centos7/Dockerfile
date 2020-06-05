@@ -43,7 +43,7 @@ RUN wget http://www.pjsip.org/release/2.9/pjproject-2.9.tar.bz2 \
 WORKDIR /usr/src
 RUN wget http://downloads.asterisk.org/pub/telephony/asterisk/asterisk-16-current.tar.gz \
   && tar xvfz asterisk-16-current.tar.gz \
-  && cd /usr/src/asterisk-16.9.0 \
+  && cd /usr/src/asterisk-16.* \
   && contrib/scripts/install_prereq install \
   && contrib/scripts/get_mp3_source.sh \
   && ./configure --libdir=/usr/lib64 --with-jansson-bundled --with-pjproject-bundled --with-crypto --with-ssl=ssl --with-srtp \
